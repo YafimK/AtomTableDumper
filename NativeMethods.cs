@@ -11,5 +11,10 @@ namespace AtomTableDumper
         [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Auto)]
         public static extern uint GlobalGetAtomName(ushort nAtom, StringBuilder lpBuffer, int nSize);
 
+        [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Auto)]
+        public static extern ushort GlobalDeleteAtom(ushort nAtom);
+
+        [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Auto)]
+        public static extern uint GetLastError();
     }
 }
